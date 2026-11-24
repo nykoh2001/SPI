@@ -1,0 +1,6 @@
+# Build output directories (any depth)
+[Oo]bj/
+[Bb]in/
+
+# STM32 vendor libraries (regenerate from SPI.ioc with STM32CubeMX)
+Drivers/
