@@ -134,6 +134,8 @@ int main(void)
    */
 
   // CR1
+  //
+  // NOTE: Baud rate -> SCK를 얼마나 빠르게 보낼지 계산
   // a) serial clock baud rate -> BR[2:0]
   uint32_t pclk2 = 16000000u;
   uint32_t target_rate = 4000000u;
@@ -144,7 +146,7 @@ int main(void)
   }
   if (br > 7)
     br = 7;
-  
+
   // BR: CR1[3]
   SPI1->CR1 &= ~(0x7u << 3);
   SPI1->CR1 |= br << 3;
@@ -185,7 +187,8 @@ int main(void)
 
   // c) if TI - FRF
   // d) if NSS pulse mode - FRF
-  
+
+  // NOTE: FIFO - TX/RX buffer
   // e) FRXTH - FIFO Reception Threshold (RXFIFO <= size of DR)
   /*
   * FRXTH = 0: 32bit -(half)-> 16bit => RXNE = 1
