@@ -4,3 +4,4 @@
 
 # STM32 vendor libraries (regenerate from SPI.ioc with STM32CubeMX)
 Drivers/
+build/
