@@ -1,8 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/Users/nykoh/code/MCU_basic/SPI/build/Debug/cmake_install.cmake",
-		"/Users/nykoh/code/MCU_basic/SPI/build/Debug/cmake/stm32cubemx/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
